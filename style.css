@@ -1,0 +1,206 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: hsl(205, 55%, 85%);
+    /* light blue background */
+    color: #222222;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Add this to style.css */
+.sidebar .card {
+    padding: 0;
+    overflow: hidden;
+    /* This will clip the image to the card's rounded corners */
+}
+
+.sidebar .card img {
+    width: 100%;
+    display: block;
+    /* Removes any extra space below the image */
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    gap: 30px;
+    /* Increased gap for better spacing */
+    margin: 20px 0;
+    justify-content: center;
+    /* Horizontally center the items */
+    align-items: center;
+    /* Vertically align them */
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+}
+
+.intro {
+    /* Don't grow, but can shrink, with an ideal width of 65 characters */
+    flex: 0 1 65ch;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    /* Don't grow or shrink, with a fixed width of 300px */
+    flex: 0 0 300px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project {
+    background: linear-gradient(135deg, #38bdf8, #22d3ee);
+    padding: 15px;
+    border-radius: 8px;
+    color: #222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-bottom: 8px;
+}
+
+/* Skills */
+#skills span {
+    background: #60a5fa;
+    /* soft blue chips */
+    color: #fff;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Contact */
+#contact {
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#contact button {
+    padding: 10px 15px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+header {
+        text-align: center;
+    }   
+
+#contact button:hover {
+    background: #1e40af;
+}
+
+.card {
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials img {
+    width: 28px;
+    margin: 0 10px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: 0.3s;
+}
+
+footer .socials img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .intro {
+        /* Resets the desktop-specific width for mobile */
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .sidebar {
+        /* Prevents the image from becoming too large on tablets */
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
