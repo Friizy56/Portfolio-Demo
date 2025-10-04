@@ -1,11 +1,9 @@
-/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* New: Added for smooth scrolling when nav links are clicked */
 html {
     scroll-behavior: smooth;
 }
@@ -23,7 +21,6 @@ body {
     padding: 20px;
 }
 
-/* Header: Consolidated the two 'header' rules into one */
 header {
     background: linear-gradient(90deg, #3b82f6, #2563eb);
     color: #fff;
@@ -83,7 +80,6 @@ header nav a:hover {
     display: block;
 }
 
-/* New: A rule to style all section headers, replacing the inline styles */
 section h2 {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -234,5 +230,48 @@ footer .socials img:hover {
         max-width: 350px;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: inline-block;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #2563eb;
+        border-radius: 8px;
+        margin-top: 15px;
+        padding: 10px 0;
+    }
+
+    header nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 0;
+    }
+
+    /* When menu checkbox is checked → show nav */
+    #menu-toggle:checked+.hamburger+nav {
+        display: flex;
     }
 }
